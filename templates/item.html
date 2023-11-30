@@ -1,0 +1,45 @@
+{% extends 'index.html' %}
+{% block title %}
+Места
+{% endblock %}
+{% block body %}
+<div class="places__items">
+                <div class="places__item">
+                    <div class="places__item-image">
+                        <img src="{{ url_for('static',filename='images/zolotye-voota.jpeg') }}" alt="">
+                    </div>
+                    <div class="places__item-title">
+                        <details>
+                            <summary><span>Золотые Ворота</span></summary>
+                            <p>Золоты́е воро́та — памятник древнерусской архитектуры, расположенный в городе Владимире. Памятник Всемирного наследия ЮНЕСКО. </p>
+                          </details>
+
+                    </div>
+                    <div class="places__item--street">
+                            <img src="{{ url_for('static',filename='images/map_FILL0_wght400_GRAD0_opsz24.svg') }}" alt="">
+                            <a href="https://yandex.ru/maps/-/CDelZEml" target="_blank">Дворянская улица, 1А</a>
+                    </div>
+                    <div class="rating-area">
+                        <input type="radio" id="star-5" name="rating" value="5">
+                        <label for="star-5" title="Оценка «5»"></label>
+                        <input type="radio" id="star-4" name="rating" value="4">
+                        <label for="star-4" title="Оценка «4»"></label>
+                        <input type="radio" id="star-3" name="rating" value="3">
+                        <label for="star-3" title="Оценка «3»"></label>
+                        <input type="radio" id="star-2" name="rating" value="2">
+                        <label for="star-2" title="Оценка «2»"></label>
+                        <input type="radio" id="star-1" name="rating" value="1">
+                        <label for="star-1" title="Оценка «1»"></label>
+                    </div>
+                    <div class="rating-result">
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+{% endblock %}
+
+

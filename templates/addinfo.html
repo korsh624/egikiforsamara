@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+{% block title %}
+Форма для отправки данных
+{% endblock %}
+{% block body %}
+    <form action="{{ url_for('read_form')}}" method="post">
+                <label for="name" class="form-label">Название</label>
+                <input name="name" type="text" class="form-control" id="name">
+
+                <label for="photo" class="form-label">Ссылка на фото_1</label>
+                <input name="photo" type="text" class="form-control" id="photo">
+
+                <label for="imlink" class="form-label">Ссылка на фото_2</label>
+                <input name="imlink" type="text" class="form-control" id="imlink">
+
+                <label for="linkya" class="form-label">Yandex карты</label>
+                <input name="linkya" type="text" class="form-control" id="linkya">
+
+                <label for="descrip" class="form-label">Описание</label>
+                <input name="descrip" type="text" class="form-control" id="descrip">
+
+                <label for="excurs" class="form-label">Как посетить</label>
+                <input name="excurs" type="text" class="form-control" id="excurs">
+                </br>
+                </br>
+                <button type="submit" class="btn btn-primary">Отправить</button>
+            </form>
+{% endblock %}

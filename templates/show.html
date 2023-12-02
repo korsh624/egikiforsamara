@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+{% block title %}
+Заказы
+{% endblock %}
+{% block body %}
+<div class="container mt-5">
+
+    {% for el in  places %}
+        <div class="alert alert-info">
+          <a href="/getpage{{el[0]}}">
+            {{el[0]}}    {{el[1]}}    {{el[2]}}  
+          </a>  
+        </div>
+    {% endfor %}
+   
+    
+</div>
+{% endblock %}

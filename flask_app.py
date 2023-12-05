@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 from db import databasemanager
 app = Flask(__name__)
 
-@app.route("/index")
+@app.route("/")
 def home():
     return render_template('index.html')
 

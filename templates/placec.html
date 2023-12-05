@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Места</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&family=Roboto+Condensed:wght@500&display=swap');
+      </style>
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&family=Roboto+Condensed:wght@400;500&display=swap');
+      </style>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+    <link type="image/x-icon" href="images/Vid-na-Zolotye-vorota-Vladimira.jpg" rel="shortcut icon">
+    <link type="Image/x-icon" href="images/Vid-na-Zolotye-vorota-Vladimira.jpg" rel="icon">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__items">
+                <div class="header__items">
+                    <ul class="main__menu flex-container">
+                        <li><a href="http://127.0.0.1:5000/index"><h2>Культура Владимира</h2></a></li>
+                        <li>
+                            <a href="http://127.0.0.1:5000/museums">Музеи</a>
+                        </li>
+                        <li>
+                            <a href="http://127.0.0.1:5000/buildings">Здания</a>
+                        </li>
+                        <li>
+                            <a href="http://127.0.0.1:5000/monument">Памятники</a>
+                        </li>
+                        <li>
+                            <a href="http://127.0.0.1:5000/placec">Места</a>
+                        </li>
+                        <li>
+                            <a href="http://127.0.0.1:5000/peoples">Люди</a>
+                        </li>
+                    </ul>
+            </div>
+                <div class="main__menu--txt"><p>«Культура Владимир» собрал для вас в одном месте исторические и памятные места нашего города.</p></div>
+            </div>
+        </div>
+    </header>
+    <div class="places">
+        <div class="container">
+            <div class="places__title">
+                <h2>Места</h2>
+            </div>
+            <div class="places__items">
+                <div class="places__item">
+                    <div class="places__item-image">
+                        <img src="images/zolotye-voota.jpeg" alt="">
+                    </div>
+                    <div class="places__item-title">
+                        <details>
+                            <summary><span>Золотые Ворота</span></summary>
+                            <p>Золоты́е воро́та — памятник древнерусской архитектуры, расположенный в городе Владимире. Памятник Всемирного наследия ЮНЕСКО. </p>
+                          </details>
+                          
+                    </div>
+                    <div class="places__item--street">
+                            <img src="images/map_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                            <a href="https://yandex.ru/maps/-/CDelZEml" target="_blank">Дворянская улица, 1А</a>
+                    </div>
+                    <div class="rating-area">
+                        <input type="radio" id="star-5" name="rating" value="5">
+                        <label for="star-5" title="Оценка «5»"></label>	
+                        <input type="radio" id="star-4" name="rating" value="4">
+                        <label for="star-4" title="Оценка «4»"></label>    
+                        <input type="radio" id="star-3" name="rating" value="3">
+                        <label for="star-3" title="Оценка «3»"></label>  
+                        <input type="radio" id="star-2" name="rating" value="2">
+                        <label for="star-2" title="Оценка «2»"></label>    
+                        <input type="radio" id="star-1" name="rating" value="1">
+                        <label for="star-1" title="Оценка «1»"></label>
+                    </div>
+                    <div class="rating-result">
+                        <span class="active"></span>	
+                        <span class="active"></span>    
+                        <span class="active"></span>  
+                        <span></span>    
+                        <span></span>
+                    </div>
+                </div>
+                <div class="places__item">
+                    <div class="places__item-image">
+                        <img src="images/zolotye-voota.jpeg" alt="">
+                    </div>
+                    <div class="places__item-title">
+                        <details>
+                            <summary><span>Золотые Ворота</span></summary>
+                            <p>Золоты́е воро́та — памятник древнерусской архитектуры, расположенный в городе Владимире. Памятник Всемирного наследия ЮНЕСКО. </p>
+                          </details>
+                          
+                    </div>
+                    <div class="places__item--street">
+                            <img src="images/map_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                            <a href="https://yandex.ru/maps/-/CDelZEml" target="_blank">Дворянская улица, 1А</a>
+                    </div>
+                    <div class="rating-area">
+                        <input type="radio" id="star-5" name="rating" value="5">
+                        <label for="star-5" title="Оценка «5»"></label>	
+                        <input type="radio" id="star-4" name="rating" value="4">
+                        <label for="star-4" title="Оценка «4»"></label>    
+                        <input type="radio" id="star-3" name="rating" value="3">
+                        <label for="star-3" title="Оценка «3»"></label>  
+                        <input type="radio" id="star-2" name="rating" value="2">
+                        <label for="star-2" title="Оценка «2»"></label>    
+                        <input type="radio" id="star-1" name="rating" value="1">
+                        <label for="star-1" title="Оценка «1»"></label>
+                    </div>
+                    <div class="rating-result">
+                        <span class="active"></span>	
+                        <span class="active"></span>    
+                        <span class="active"></span>  
+                        <span></span>    
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+
+
+
+    <footer>
+        <div class="footer__nav">
+            <div class="container">
+                <div class="footer__items">
+                    <div class="footer__info--items">
+                        <div class="footer__info--item">
+                            <ul>
+                                <li><a href="#"><h3>наши услуги</h3></a></li>
+                                <li><a href="#"><p>Разработка сайтов</p></a></li>
+                                <li><a href="#"><p>Продвижение сайтов</p></a></li>
+                                <li><a href="#"><p>Поддержка сайтов</p></a></li>
+                                <li><a href="#"><p>Контекстная реклама</p></a></li>
+                                <li><a href="#"><p>Социальне сети</p></a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__info--item">
+                            <ul>
+                                <li><a href="#"><h3>наше портфолио</h3></a></li>
+                                <li><a href="#"><p>Портфолио по разработке сайтов</p></a></li>
+                                <li><a href="#"><p>Портфолио по дизайн-макетов</p></a></li>
+                                <li><a href="#"><p>Портфолио по видеоконтенту</p></a></li>
+                                <li><a href="#"><p>Портфолио по фотоконтенту</p></a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__info--item">
+                            <ul>
+                                <li><a href="#"><h3>IT-курсы</h3></a></li>
+                                <li><a href="#"><p>С# - разработчки (базовый уровень)</p></a></li>
+                                <li><a href="#"><p>Java - разработчки (базовый уровень)</p></a></li>
+                                <li><a href="#"><p>Phyton - разработчки (базовый уровень)</p></a></li>
+                                <li><a href="#"><p>Веб - разработчик FULLSTACK</p></a></li>
+                                <li><a href="#"><p>Cоздание веб - приложений на React и Redux</p></a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__info--item">
+                            <ul>
+                                <li><a href="#"><h3>Cтатьи</h3></a></li>
+                                <li><a href="#"><p>О компании</p></a></li>
+                                <li><a href="#"><p>Политика возврата средств</p></a></li>
+                                <li><a href="#"><p>Условия доставки</p></a></li>
+                                <li><a href="#"><p>Персональные данны</p></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyriht-soc">
+                    <div class="copyriht">
+                        <p>
+                            Веб-студия "Профессионал" 350004, г. Краснодар, ул. Бабушкина, 252, оф. 11
+                                ИНН 231114234337, ОГРН 304231136600682
+                        </p>
+                    </div>
+                    <div class="soc">
+                        <div class="soc-items">
+                            <div class="soc-bacc">
+                                <img src="images/footer-soc__fon.png" alt="">
+                            </div>
+                            <div class="soc__item--tg">
+                                <a href="#"><img src="images/tg_logo.png" alt=""></a>
+                            </div>
+                            <div class="soc__item--vk">
+                                <a href="#"><img src="images/vk-social-network-logo.png" alt=""></a>
+                            </div>
+                            <div class="soc__item--inst">
+                                <a href="#"><img src="images/instagram_logo.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>

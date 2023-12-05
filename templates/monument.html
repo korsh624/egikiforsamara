@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Культура Владимира{% endblock %}</title>
+    <title>Места</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&family=Roboto+Condensed:wght@500&display=swap');
       </style>
@@ -11,8 +11,8 @@
         @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&family=Roboto+Condensed:wght@400;500&display=swap');
       </style>
     <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
-    <link type="image/x-icon" href="{{ url_for('static',filename='images/Vid-na-Zolotye-vorota-Vladimira.jpg') }}" rel="shortcut icon">
-    <link type="Image/x-icon" href="{{ url_for('static',filename='images/Vid-na-Zolotye-vorota-Vladimira.jpg') }}" rel="icon">
+    <link type="image/x-icon" href="images/Vid-na-Zolotye-vorota-Vladimira.jpg" rel="shortcut icon">
+    <link type="Image/x-icon" href="images/Vid-na-Zolotye-vorota-Vladimira.jpg" rel="icon">
 </head>
 <body>
     <header class="header">
@@ -39,19 +39,86 @@
                 <div class="main__menu--txt"><p>«Культура Владимир» собрал для вас в одном месте исторические и памятные места нашего города.</p></div>
             </div>
         </div>
-        
     </header>
     <div class="places">
         <div class="container">
             <div class="places__title">
                 <h2>Места</h2>
             </div>
-            <main>
-                {% block body %}{% endblock %}
-            </main>
+            <div class="places__items">
+                <div class="places__item">
+                    <div class="places__item-image">
+                        <img src="images/zolotye-voota.jpeg" alt="">
+                    </div>
+                    <div class="places__item-title">
+                        <details>
+                            <summary><span>Золотые Ворота</span></summary>
+                            <p>Золоты́е воро́та — памятник древнерусской архитектуры, расположенный в городе Владимире. Памятник Всемирного наследия ЮНЕСКО. </p>
+                          </details>
+                          
+                    </div>
+                    <div class="places__item--street">
+                            <img src="images/map_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                            <a href="https://yandex.ru/maps/-/CDelZEml" target="_blank">Дворянская улица, 1А</a>
+                    </div>
+                    <div class="rating-area">
+                        <input type="radio" id="star-5" name="rating" value="5">
+                        <label for="star-5" title="Оценка «5»"></label>	
+                        <input type="radio" id="star-4" name="rating" value="4">
+                        <label for="star-4" title="Оценка «4»"></label>    
+                        <input type="radio" id="star-3" name="rating" value="3">
+                        <label for="star-3" title="Оценка «3»"></label>  
+                        <input type="radio" id="star-2" name="rating" value="2">
+                        <label for="star-2" title="Оценка «2»"></label>    
+                        <input type="radio" id="star-1" name="rating" value="1">
+                        <label for="star-1" title="Оценка «1»"></label>
+                    </div>
+                    <div class="rating-result">
+                        <span class="active"></span>	
+                        <span class="active"></span>    
+                        <span class="active"></span>  
+                        <span></span>    
+                        <span></span>
+                    </div>
+                </div>
+                <div class="places__item">
+                    <div class="places__item-image">
+                        <img src="images/zolotye-voota.jpeg" alt="">
+                    </div>
+                    <div class="places__item-title">
+                        <details>
+                            <summary><span>Золотые Ворота</span></summary>
+                            <p>Золоты́е воро́та — памятник древнерусской архитектуры, расположенный в городе Владимире. Памятник Всемирного наследия ЮНЕСКО. </p>
+                          </details>
+                          
+                    </div>
+                    <div class="places__item--street">
+                            <img src="images/map_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                            <a href="https://yandex.ru/maps/-/CDelZEml" target="_blank">Дворянская улица, 1А</a>
+                    </div>
+                    <div class="rating-area">
+                        <input type="radio" id="star-5" name="rating" value="5">
+                        <label for="star-5" title="Оценка «5»"></label>	
+                        <input type="radio" id="star-4" name="rating" value="4">
+                        <label for="star-4" title="Оценка «4»"></label>    
+                        <input type="radio" id="star-3" name="rating" value="3">
+                        <label for="star-3" title="Оценка «3»"></label>  
+                        <input type="radio" id="star-2" name="rating" value="2">
+                        <label for="star-2" title="Оценка «2»"></label>    
+                        <input type="radio" id="star-1" name="rating" value="1">
+                        <label for="star-1" title="Оценка «1»"></label>
+                    </div>
+                    <div class="rating-result">
+                        <span class="active"></span>	
+                        <span class="active"></span>    
+                        <span class="active"></span>  
+                        <span></span>    
+                        <span></span>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-
+    </div>   
 
 
 
@@ -110,16 +177,16 @@
                     <div class="soc">
                         <div class="soc-items">
                             <div class="soc-bacc">
-                                <img src="{{ url_for('static',filename='images/footer-soc__fon.png') }}" alt="">
+                                <img src="images/footer-soc__fon.png" alt="">
                             </div>
                             <div class="soc__item--tg">
-                                <a href="#"><img src="{{ url_for('static',filename='images/tg_logo.png') }}" alt=""></a>
+                                <a href="#"><img src="images/tg_logo.png" alt=""></a>
                             </div>
                             <div class="soc__item--vk">
-                                <a href="#"><img src="{{ url_for('static',filename='images/vk-social-network-logo.png') }}" alt=""></a>
+                                <a href="#"><img src="images/vk-social-network-logo.png" alt=""></a>
                             </div>
                             <div class="soc__item--inst">
-                                <a href="#"><img src="{{ url_for('static',filename='images/instagram_logo.png') }}" alt=""></a>
+                                <a href="#"><img src="images/instagram_logo.png" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -129,7 +196,6 @@
     </footer>
 
 
-
-    <script src="{{ url_for('static',filename='js/script.js') }}"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

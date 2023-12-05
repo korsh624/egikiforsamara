@@ -2,9 +2,32 @@ from flask import Flask, render_template, request
 from db import databasemanager
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/index")
 def home():
     return render_template('index.html')
+
+@app.route("/museums")
+def museums():
+    return render_template('museums.html')
+
+@app.route("/buildings")
+def buildings():
+    return render_template('buildings.html')
+
+
+@app.route("/monument")
+def monument():
+    return render_template('monument.html') 
+
+
+@app.route("/peoples")
+def peoples():
+    return render_template('peoples.html') 
+
+
+@app.route("/placec")
+def placec():
+    return render_template('placec.html') 
 
 @app.route("/addinfo")
 def form():

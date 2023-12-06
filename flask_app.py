@@ -10,7 +10,7 @@ def home():
 def museums():
     try:     
         History = databasemanager('history.db')
-        places = History.fetchall("""SELECT * FROM Histori""")
+        places = History.fetchall(f"SELECT * FROM Histori WHERE id >4 and id <9 ")
         print(places)
     except:
         places=[("НЕТ ДАННЫХ","НЕТ ДАННЫХ","НЕТ ДАННЫХ")]
@@ -18,21 +18,53 @@ def museums():
 
 @app.route("/buildings")
 def buildings():
+    try:     
+        History = databasemanager('history.db')
+        places = History.fetchall(f"SELECT * FROM Histori WHERE id >8 and id <13 ")
+        print(places)
+    except:
+        places=[("НЕТ ДАННЫХ","НЕТ ДАННЫХ","НЕТ ДАННЫХ")]
+    return render_template('museums.html',places=places)
+
     return render_template('buildings.html')
 
 
 @app.route("/monument")
 def monument():
+    try:     
+        History = databasemanager('history.db')
+        places = History.fetchall(f"SELECT * FROM Histori WHERE id <5 ")
+        print(places)
+    except:
+        places=[("НЕТ ДАННЫХ","НЕТ ДАННЫХ","НЕТ ДАННЫХ")]
+    return render_template('museums.html',places=places)
+
     return render_template('monument.html') 
 
 
 @app.route("/peoples")
 def peoples():
+    try:     
+        History = databasemanager('history.db')
+        places = History.fetchall(f"SELECT * FROM Histori WHERE id >16 ")
+        print(places)
+    except:
+        places=[("НЕТ ДАННЫХ","НЕТ ДАННЫХ","НЕТ ДАННЫХ")]
+    return render_template('museums.html',places=places)
+
     return render_template('peoples.html') 
 
 
 @app.route("/placec")
 def placec():
+    try:     
+        History = databasemanager('history.db')
+        places = History.fetchall(f"SELECT * FROM Histori WHERE id >12 and id <17 ")
+        print(places)
+    except:
+        places=[("НЕТ ДАННЫХ","НЕТ ДАННЫХ","НЕТ ДАННЫХ")]
+    return render_template('museums.html',places=places)
+
     return render_template('placec.html') 
 
 @app.route("/addinfo")

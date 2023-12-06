@@ -201,7 +201,9 @@ table {
 }
 footer{
     background-color: #3CB371;
-    flex: 0 0 auto;
+   
+    left: 0;
+    right: 0;
 }
 .footer__items{
   margin-left: 36px;

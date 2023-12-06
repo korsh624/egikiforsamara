@@ -301,3 +301,16 @@ footer{
   margin-top: 12px;
   margin-left: 133px;
 }
+.photos__title{
+    display: flex;
+
+}
+.photo__title--main{
+
+}
+.photo__title--main img{
+
+}
+.photo__title--unmain img{
+    width:50%;
+}

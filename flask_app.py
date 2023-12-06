@@ -2,13 +2,19 @@ from flask import Flask, render_template, request
 from db import databasemanager
 app = Flask(__name__)
 
-@app.route("/index")
+@app.route("/")
 def home():
     return render_template('index.html')
 
 @app.route("/museums")
 def museums():
-    return render_template('museums.html')
+    try:     
+        History = databasemanager('history.db')
+        places = History.fetchall("""SELECT * FROM Histori""")
+        print(places)
+    except:
+        places=[("НЕТ ДАННЫХ","НЕТ ДАННЫХ","НЕТ ДАННЫХ")]
+    return render_template('museums.html',places=places)
 
 @app.route("/buildings")
 def buildings():
@@ -66,7 +72,15 @@ def item():
     except:
         places=[("НЕТ ДАННЫХ","НЕТ ДАННЫХ","НЕТ ДАННЫХ")]
     return render_template('item.html',places=places)
-
+@app.route("/show")
+def show(): 
+    try:     
+        History = databasemanager('history.db')
+        places = History.fetchall("""SELECT * FROM Histori""")
+        print(places)
+    except:
+        places=[("НЕТ ДАННЫХ","НЕТ ДАННЫХ","НЕТ ДАННЫХ")]
+    return render_template('show.html',places=places)
 @app.route("/getpage<page_id>")
 def getpage(page_id): 
     try:     

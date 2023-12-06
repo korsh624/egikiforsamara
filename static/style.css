@@ -114,7 +114,7 @@ table {
 }
 .places__item-image img{
     display: flex;
-    max-width: 100%;
+    width: 100%;
 }
 .places__item--street{
     display: flex;

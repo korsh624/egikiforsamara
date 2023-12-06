@@ -24,9 +24,7 @@ def buildings():
         print(places)
     except:
         places=[("НЕТ ДАННЫХ","НЕТ ДАННЫХ","НЕТ ДАННЫХ")]
-    return render_template('museums.html',places=places)
-
-    return render_template('buildings.html')
+    return render_template('buildings.html',places=places)
 
 
 @app.route("/monument")
@@ -37,9 +35,8 @@ def monument():
         print(places)
     except:
         places=[("НЕТ ДАННЫХ","НЕТ ДАННЫХ","НЕТ ДАННЫХ")]
-    return render_template('museums.html',places=places)
+    return render_template('monument.html',places=places)
 
-    return render_template('monument.html') 
 
 
 @app.route("/peoples")
@@ -50,9 +47,8 @@ def peoples():
         print(places)
     except:
         places=[("НЕТ ДАННЫХ","НЕТ ДАННЫХ","НЕТ ДАННЫХ")]
-    return render_template('museums.html',places=places)
+    return render_template('peoples.html',places=places)
 
-    return render_template('peoples.html') 
 
 
 @app.route("/placec")
@@ -63,9 +59,7 @@ def placec():
         print(places)
     except:
         places=[("НЕТ ДАННЫХ","НЕТ ДАННЫХ","НЕТ ДАННЫХ")]
-    return render_template('museums.html',places=places)
-
-    return render_template('placec.html') 
+    return render_template('placec.html',places=places)
 
 @app.route("/addinfo")
 def form():

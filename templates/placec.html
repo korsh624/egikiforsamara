@@ -1,157 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Места</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&family=Roboto+Condensed:wght@500&display=swap');
-      </style>
-      <style>
-        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&family=Roboto+Condensed:wght@400;500&display=swap');
-      </style>
-     <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
-    <link type="image/x-icon" href="images/Vid-na-Zolotye-vorota-Vladimira.jpg" rel="shortcut icon">
-    <link type="Image/x-icon" href="images/Vid-na-Zolotye-vorota-Vladimira.jpg" rel="icon">
-</head>
-<body>
-    <header class="header">
-        <div class="container">
-            <div class="header__items">
-                <div class="header__items">
-                    <ul class="main__menu flex-container">
-                        <li><a href="http://127.0.0.1:5000/"><h2>Культура Владимира</h2></a></li>
-                        <li>
-                            <a href="http://127.0.0.1:5000/museums">Музеи</a>
-                        </li>
-                        <li>
-                            <a href="http://127.0.0.1:5000/buildings">Здания</a>
-                        </li>
-                        <li>
-                            <a href="http://127.0.0.1:5000/monument">Памятники</a>
-                        </li>
-                        <li>
-                            <a href="http://127.0.0.1:5000/placec">Места</a>
-                        </li>
-                        <li>
-                            <a href="http://127.0.0.1:5000/peoples">Люди</a>
-                        </li>
-                    </ul>
-            </div>
-                <div class="main__menu--txt"><p>«Культура Владимир» собрал для вас в одном месте исторические и памятные места нашего города.</p></div>
-            </div>
-        </div>
-    </header>
-    <div class="places">
-        <div class="container">
-            <div class="places__title">
-                <h2>Места</h2>
-            </div>
-            {%for el in places%}
-            <div class="places__items">
-                <div class="places__item">
-                    <div class="places__item-image">
-                        <img src="{{el[2]}}" alt="">
-                    </div>
-                    <div class="places__item-title">
-                        <details>
-                            <summary><span>{{el[1]}}</span></summary>
-                            <p>{{el[5]}} </p>
-                          </details>
-                          
-                    </div>
-                    <div class="places__item--street">
-                            <img src="{{el[3]}}" alt="">
-                            <a href="{{el[4]}}" target="_blank">{{el[6]}}</a>
-                    </div>
-                    <div class="rating-area">
-                        <input type="radio" id="star-5" name="rating" value="5">
-                        <label for="star-5" title="Оценка «5»"></label>	
-                        <input type="radio" id="star-4" name="rating" value="4">
-                        <label for="star-4" title="Оценка «4»"></label>    
-                        <input type="radio" id="star-3" name="rating" value="3">
-                        <label for="star-3" title="Оценка «3»"></label>  
-                        <input type="radio" id="star-2" name="rating" value="2">
-                        <label for="star-2" title="Оценка «2»"></label>    
-                        <input type="radio" id="star-1" name="rating" value="1">
-                        <label for="star-1" title="Оценка «1»"></label>
-                    </div>
-                    <div class="rating-result">
-                        <span class="active"></span>	
-                        <span class="active"></span>    
-                        <span class="active"></span>  
-                        <span></span>    
-                        <span></span>
-                    </div>
+{% extends 'index.html' %}
+{% block title %}
+Памятники
+{% endblock %}
+{% block body %}
+<div class="container">
+    <div class="places__items">
+        {%for el in places%}
+        
+            <div class="places__item">
+                <div class="places__item-image">
+                    <img src="{{el[2]}}" alt="">
+                </div>
+                <div class="places__item-title">
+                    <details>
+                        <summary><span>{{el[1]}}</span></summary>
+                        <p>{{el[5]}} </p>
+                    </details>
+                </div>
+                <div class="places__item--street">
+                    <img src="{{el[3]}}" alt="">
+                    <a href="{{el[4]}}" target="_blank">{{el[6]}}</a>
+                </div>
+                <div class="rating-area">
+                    <input type="radio" id="star-5" name="rating" value="5">
+                    <label for="star-5" title="Оценка «5»"></label>	
+                    <input type="radio" id="star-4" name="rating" value="4">
+                    <label for="star-4" title="Оценка «4»"></label>    
+                    <input type="radio" id="star-3" name="rating" value="3">
+                    <label for="star-3" title="Оценка «3»"></label>  
+                    <input type="radio" id="star-2" name="rating" value="2">
+                    <label for="star-2" title="Оценка «2»"></label>    
+                    <input type="radio" id="star-1" name="rating" value="1">
+                    <label for="star-1" title="Оценка «1»"></label>
+                </div>
+                <div class="rating-result">
+                    <span class="active"></span>	
+                    <span class="active"></span>    
+                    <span class="active"></span>  
+                    <span></span>    
+                    <span></span>
                 </div>
             </div>
-        </div>    
-              {%endfor%}
-
-              <footer>
-                <div class="footer__nav">
-                    <div class="container">
-                        <div class="footer__items">
-                            <div class="footer__info--items">
-                                <div class="footer__info--item">
-                                    <ul>
-                                        <li><a href="#"><h3>В разработке участвовали:</h3></a></li>
-                                        <li><a href="https://vk.com/mr_estprobitie"target="_blank"><p>Матвей Панин</p></a></li>
-                                        <li><a href="https://vk.com/id604627958"target="_blank"><p>Дмитрий Майоров</p></a></li>
-                                        <li><a href="https://vk.com/riderz"target="_blank"><p>Андрей Коршунов</p></a></li>
-                                        <li><a href="https://vk.com/rezo_ntov"target="_blank"><p>Резонтов Александр</p></a></li>
-                                    </ul>
-                                </div>
-                                <div class="footer__info--item">
-                                    <ul>
-                                        <li><a href="#"><h3>Источники</h3></a></li>
-                                        <li><a href="https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" target="_blank"><p>Википедию</p></a></li>
-                                        <li><a href="https://stackoverflow.com/" target="_blank"><p>Stackoverflow</p></a></li>
-                                        <li><a href="https://github.com/"target="_blank"><p>GitHub</p></a></li>
-                                        <li><a href="https://habr.com/ru/articles/"target="_blank"><p>Habr</p></a></li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="footer__info--item">
-                                    <ul>
-                                        <li><a href="#"><h3>Cтатьи</h3></a></li>
-                                        <li><a href="https://www.vladimir-city.ru/" target="_blank"><p>город Владимир</p></a></li>
-                                        <li><a href="https://www.tripadvisor.ru/Tourism-g445046-Vladimir_Vladimir_Oblast_Central_Russia-Vacations.html"target="_blank"><p>Откройте для себя направление  Владимир</p></a></li>
-                                        <li><a href="https://www.culture.ru/s/goroda/vladimir/"target="_blank"><p>Открываем города России</p></a></li>
-                                        <li><a href="https://www.tourism33.ru/guide/cities/vladimir/"target="_blank"><p>Туристический портал</p></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="copyriht-soc">
-                            <div class="copyriht">
-                                <p>
-                                    Детский технопарк "Кванториум-33". Адрес: ул. Каманина, д. 30/18, Владимир, Владимирская обл., 600009  
-                                </p>
-                            </div>
-                            <div class="soc">
-                                <div class="soc-items">
-                                    <div class="soc-bacc">
-                                        <img src="images/footer-soc__fon.png" alt="">
-                                    </div>
-                                    <div class="soc__item--tg">
-                                        <a href="#"><img src="images/tg_logo.png" alt=""></a>
-                                    </div>
-                                    <div class="soc__item--vk">
-                                        <a href="#"><img src="images/vk-social-network-logo.png" alt=""></a>
-                                    </div>
-                                    <div class="soc__item--inst">
-                                        <a href="#"><img src="images/instagram_logo.png" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>  
-                    </div>
-                </div>
-            </footer>
         
-        
-        
-            <script src="{{ url_for('static',filename='js/script.js') }}"></script>
-</body>
-</html>
+        {%endfor%}
+    </div>
+</div>
+{% endblock %}

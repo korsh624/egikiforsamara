@@ -105,9 +105,9 @@ table {
     border-bottom: 4px solid #2E8B57;
 }
 .places__item{
-    width: 48%;
-    margin-bottom: 40px;
-    padding: 10px;
+    width: 40%;
+    margin: 20px;
+    padding: 20px;
     -webkit-box-shadow: 1px 1px 15px 5px rgba(0, 0, 0, 0.11);
     -moz-box-shadow: 1px 1px 15px 5px rgba(0, 0, 0, 0.11);
     box-shadow: 1px 1px 15px 5px rgba(0, 0, 0, 0.11);
